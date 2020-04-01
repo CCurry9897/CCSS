@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    <div class="s">
-    <heart-beat></heart-beat>
-    </div>
+      <heart-beat></heart-beat>
   </div>
 </template>
 
@@ -10,8 +8,8 @@
 import heartBeat from '../src/myPlugin/heartBeat/heartBeat.vue'
 export default {
   name: 'app',
-  data () {
-    
+  data () {  
+
   },
   components:{
     heartBeat
@@ -20,7 +18,7 @@ export default {
 </script>
 
 <style>
-  .s{
+  #app{
     width: 400px;
     height: 400px;
     margin: 0 auto;
