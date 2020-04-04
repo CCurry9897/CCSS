@@ -1,7 +1,7 @@
 {
   "name": "cc_heartbeat",
   "description": "a heart beating animation made by css",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "CCurry <544232606@qq.com>",
   "license": "MIT",
   "private": false,

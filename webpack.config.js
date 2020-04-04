@@ -9,7 +9,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'heartBeat.js',
+    filename: 'heartBeat.js', 
     library:'heartBeat',//指定使用require时的模块名字
     libraryTarget:'umd',//指定输出格式
     umdNamedDefine:true//会对 UMD 的构建过程中的 AMD 模块进行命名。否则就使用匿名的 define
@@ -68,7 +68,7 @@ if (process.env.NODE_ENV === 'production') {
   module.exports.plugins = (module.exports.plugins || []).concat([
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: '"production"'
+        NODE_ENV: '"production"' 
       }
     }),
     new webpack.optimize.UglifyJsPlugin({
