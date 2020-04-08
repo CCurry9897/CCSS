@@ -1,42 +1,48 @@
 <template>
-  <div class = "heart">
+  <div class = "heart" :style="{width: width,height: height}">
     <!-- 必须设置宽高一致 -->
-    <div class="myHeart top1"></div>
-    <div class="myHeart top2"></div>
-    <div class="myHeart center"></div>
+    <div class="heart__div--top1"></div>
+    <div class="heart__div--top2"></div>
+    <div class="heart__div--center"></div>
   </div>
 </template>
 
 <script>
 export default {
-  name:'heartBeat'
+  name:'heartBeat',
+  props: {
+    width: {
+      type: String,
+      default: '100%'
+    },
+    height: {
+      type: String,
+      default: '100%'
+    }
+  }
 }
 </script>
 
 <style>
   body{
-    /* background: rgb(230, 144, 144); */
     height: 100%;
     margin: 0;
     padding: 0;
   }
   .heart{
-    width: 100%;
-    height: 100%;
+    width: 100px; 
+    height: 100px;
   } 
-  .myHeart{
-    position: absolute;
-    background: linear-gradient(-90deg,#f50843 0%, #f50843 40%);
-    animation: heartBeat 0.7s ease 0s infinite normal;
-  }
-  .top1{
+  .heart__div--top1{
     width: 50%;
-    height: 50%;
+    height: 50%; 
     position: relative;
     border-radius: 50%;
     z-index: 5;
+    background: linear-gradient(-90deg,#f50843 0%, #f50843 40%);
+    animation: heartBeat 0.7s ease 0s infinite normal;
   }
-  .top2{
+  .heart__div--top2{
     width: 50%;
     height: 50%;
     position: relative;
@@ -44,8 +50,10 @@ export default {
     top: -50%;
     z-index: 2;
     border-radius: 50%;
+    background: linear-gradient(-90deg,#f50843 0%, #f50843 40%);
+    animation: heartBeat 0.7s ease 0s infinite normal;
   }
-  .center{
+  .heart__div--center{
     width: 50%;
     height: 50%;
     position: relative;
@@ -53,6 +61,8 @@ export default {
     top: -85%;
     left: 15.55%;
     background:linear-gradient(-45deg,#f50843  0%, #f50843 40%);
+    background: linear-gradient(-90deg,#f50843 0%, #f50843 40%);
+    animation: heartBeat 0.7s ease 0s infinite normal;
   }
   @keyframes heartBeat{
     0%{
